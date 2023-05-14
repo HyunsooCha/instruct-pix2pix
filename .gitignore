@@ -1,0 +1,43 @@
+# video files
+*.mp4
+*.MOV
+*.mov
+
+# data files
+*.pkl
+*.npy
+*.npz
+*.h5
+*.ckpt
+*.obj
+*.json
+*.ply
+*.pth
+*.pt
+*.csv
+*.mtl
+*.swp
+
+# image files
+*.jpg
+*.png
+*.jpeg
+*.gif
+
+# zip files
+*.tar
+*.gz
+*.zip
+*.rar
+*.7z
+
+# document files
+*.pdf
+
+# cache
+*.pyc
+__pycache__/*
+*.so
+*.egg
+*.o
+.vscode/
