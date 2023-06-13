@@ -1,5 +1,9 @@
 #!/bin/zsh
+<<<<<<< HEAD
 set -e
+=======
+
+>>>>>>> df27a1f741adaf17ccf8515bb245027f3513489d
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 SAVE_DIR=$SCRIPT_DIR/../results/hat
 mkdir -p $SAVE_DIR
