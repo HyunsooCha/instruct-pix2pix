@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 SAVE_DIR = $SCRIPT_DIR/../results/cyborg
