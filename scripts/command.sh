@@ -1,11 +1,11 @@
-#!/bin/bash
-
+#!/bin/zsh
+set -e
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 SAVE_DIR=$SCRIPT_DIR/../results/hat
 mkdir -p $SAVE_DIR
 SEED=100
 CFG_IMG=2.5
-PROMPT="Add a straw hat"
+PROMPT="Add a straw hat, align with head, high quality"
 python edit_cli.py --input /home/hyunsoocha/GitHub/IMavatar/data/datasets/youtuber/youtuber/hyunsoo_1/image/15.png --output $SAVE_DIR/gen1.png --edit "$PROMPT" --cfg-image $CFG_IMG --seed $SEED
 python edit_cli.py --input /home/hyunsoocha/GitHub/IMavatar/data/datasets/youtuber/youtuber/hyunsoo_1/image/56.png --output $SAVE_DIR/gen2.png --edit "$PROMPT" --cfg-image $CFG_IMG --seed $SEED
 python edit_cli.py --input /home/hyunsoocha/GitHub/IMavatar/data/datasets/youtuber/youtuber/hyunsoo_1/image/105.png --output $SAVE_DIR/gen3.png --edit "$PROMPT" --cfg-image $CFG_IMG --seed $SEED
