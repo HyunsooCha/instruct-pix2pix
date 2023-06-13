@@ -5,7 +5,7 @@ SAVE_DIR=$SCRIPT_DIR/../results/hat
 mkdir -p $SAVE_DIR
 SEED=100
 CFG_IMG=2.5
-device=0
+device=1
 PROMPT="Add a straw hat"
 total_frames=100
 cd ..
