@@ -1,12 +1,12 @@
 #!/bin/zsh
 set -e
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-SAVE_DIR=$SCRIPT_DIR/../results/hat
+SAVE_DIR=$SCRIPT_DIR/../results/bald_hair
 mkdir -p $SAVE_DIR
 SEED=100
 CFG_IMG=2.5
-device=1
-PROMPT="Add a straw hat"
+device=0
+PROMPT="turn him into a bald hair"
 total_frames=100
 cd ..
 for ((frame_num=1;frame_num<=total_frames;frame_num++))
