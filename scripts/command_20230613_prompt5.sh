@@ -1,15 +1,18 @@
 #!/bin/zsh
 set -e
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-SAVE_DIR=$SCRIPT_DIR/../results/mohican_hair
+INPUT_DIR=/home/hyunsoocha/GitHub/IMavatar/data/experiments/youtuber/naive_human_fewshot/hyunsoo_1/eval/hyunsoo_4/epoch_250/rgb
+# SAVE_DIR=$SCRIPT_DIR/../results/mortar_board
+SAVE_DIR=/home/hyunsoocha/GitHub/IMavatar/data/experiments/youtuber/naive_human_fewshot/hyunsoo_1/eval/hyunsoo_4/epoch_250/crown
 mkdir -p $SAVE_DIR
 SEED=100
-CFG_IMG=2.5
-device=0
-PROMPT="turn him into a Mohican hairstyle"
-total_frames=100
+CFG_TXT=7.5
+CFG_IMG=2.2
+device=5
+PROMPT="put on a crown"
+total_frames=950
 cd ..
 for ((frame_num=1;frame_num<=total_frames;frame_num++))
 do
-    CUDA_VISIBLE_DEVICES=$device python edit_cli.py --input /home/hyunsoocha/GitHub/IMavatar/data/datasets/youtuber/youtuber/hyunsoo_1/image/$frame_num.png --output $SAVE_DIR/$frame_num.png --edit "$PROMPT" --cfg-image $CFG_IMG --seed $SEED
+    CUDA_VISIBLE_DEVICES=$device python edit_cli.py --input $INPUT_DIR/$frame_num.png --output $SAVE_DIR/$frame_num.png --edit "$PROMPT" --cfg-text $CFG_TXT --cfg-image $CFG_IMG --seed $SEED --resolution 256
 done
