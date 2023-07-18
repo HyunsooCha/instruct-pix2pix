@@ -11,7 +11,7 @@ mkdir -p $SAVE_DIR
 SEED=100
 CFG_TXT=7.5
 CFG_IMG=2.0
-device=7
+device=4
 PROMPT="put on a pair of sunglasses"
 start_frame=601
 total_frames=1218
