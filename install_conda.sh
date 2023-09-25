@@ -6,3 +6,4 @@ conda activate
 
 conda env create -f environment.yaml
 conda activate ip2p
+pip install natsort

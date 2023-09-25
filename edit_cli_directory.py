@@ -16,6 +16,7 @@ from PIL import Image, ImageOps
 from torch import autocast
 import os
 from tqdm import tqdm
+import natsort
 
 sys.path.append("./stable_diffusion")
 
@@ -89,8 +90,10 @@ def main():
 
     input_path = os.path.join(args.base_path, args.input_dir)
     output_path = os.path.join(args.base_path, args.output_dir)
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
 
-    for file in tqdm(os.listdir(input_path)):
+    for file in tqdm(natsort.natsorted(os.listdir(input_path))):
         input_image = Image.open(os.path.join(input_path, file)).convert("RGB")
         width, height = input_image.size
         factor = args.resolution / max(width, height)
