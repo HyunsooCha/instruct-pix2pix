@@ -4,7 +4,7 @@ source $HOME/anaconda3/etc/profile.d/conda.sh
 conda activate
 conda activate ip2p
 
-cd $HOME/GitHub/instruct-pix2pix
+
 
 base_path='/media/ssd2/hyunsoocha/GitHub/PointAvatar/data/datasets/hair_lama/hair_lama/yufeng/'
 input_dir='image'
