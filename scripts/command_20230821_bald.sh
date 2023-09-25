@@ -13,7 +13,7 @@ CFG_TXT=7.5
 CFG_IMG=2.0
 device=4
 PROMPT="make him a bald"
-start_frame=1
+start_frame=144
 total_frames=460
 cd ..
 for ((frame_num=start_frame;frame_num<=total_frames;frame_num++))
